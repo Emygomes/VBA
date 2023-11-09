@@ -1,0 +1,111 @@
+form VBA -EXCEL  - 
+
+
+Private Sub LIMPAR_Click()
+TextBox2.Text = ""
+
+End Sub
+
+Private Sub ListBox1_Click()
+
+End Sub
+
+Private Sub TextBox10_Change()
+Planilha1.Range("Z2") = TextBox10
+Call filtro
+End Sub
+
+Private Sub TextBox11_Change()
+Planilha1.Range("Y2") = TextBox11
+Call filtro
+End Sub
+
+Private Sub TextBox12_Change()
+Planilha1.Range("AD2") = TextBox12
+Call filtro
+End Sub
+
+Private Sub TextBox13_Change()
+Planilha1.Range("AF2") = TextBox13
+Call filtro
+End Sub
+
+Private Sub TextBox14_Change()
+Planilha1.Range("AE2") = TextBox14
+Call filtro
+End Sub
+
+Private Sub TextBox15_Change()
+Planilha1.Range("AC2") = TextBox15
+Call filtro
+End Sub
+
+Private Sub TextBox16_Change()
+Planilha1.Range("AG2") = TextBox16
+Call filtro
+End Sub
+
+Private Sub TextBox17_Change()
+Planilha1.Range("AH2") = TextBox17
+Call filtro
+End Sub
+
+Private Sub TextBox18_Change()
+Planilha1.Range("AI2") = TextBox18
+Call filtro
+End Sub
+
+Private Sub TextBox19_Change()
+Planilha1.Range("AJ2") = TextBox19
+Call filtro
+End Sub
+
+Private Sub TextBox2_Change()
+Planilha1.Range("U2") = TextBox2
+Call filtro
+End Sub
+
+Private Sub TextBox5_Change()
+Planilha1.Range("X2") = TextBox5
+Call filtro
+End Sub
+
+Private Sub TextBox6_Change()
+Planilha1.Range("W2") = TextBox6
+Call filtro
+End Sub
+
+Private Sub TextBox7_Change()
+Planilha1.Range("V2") = TextBox7
+Call filtro
+End Sub
+
+Private Sub TextBox8_Change()
+Planilha1.Range("AB2") = TextBox8
+Call filtro
+End Sub
+
+Private Sub TextBox9_Change()
+Planilha1.Range("AA2") = TextBox9
+Call filtro
+End Sub
+
+Private Sub UserForm_Click()
+Dim base As Range
+Dim nome As String
+
+Dim l As Long
+l = Planilha1.Range("A2").CurrentRegion.Rows.Count
+Set base = _
+Planilha1.Range(Planilha1.Cells(3000, 1), Planilha1.Cells(l, 16))
+
+
+nome = "'" & Planilha.Name & "'!"
+
+ListBox1.RowSource = nome & base.Address
+ListBox1.ColumnCount = 5
+Planilha1.Range("U2:AG2").ClearContents
+ListBox1.ColumnHeads = True
+
+
+End Sub

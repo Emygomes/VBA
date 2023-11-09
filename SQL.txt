@@ -1,0 +1,7 @@
+create database ca200401;
+use ca200401;
+
+criação do banco de dados feito pelo tarefas -exportar dados - exportar arquivo CSV no SQL e excutado pelo select abaixo:
+
+
+select * from dbo.ca200401$
